@@ -284,6 +284,20 @@ define Device/netgear_r7800
 endef
 TARGET_DEVICES += netgear_r7800
 
+define Device/nokia_wi4a-ac400i
+	$(call Device/FitImage)
+	$(call Device/UbiFit)
+	DEVICE_VENDOR := Nokia Airscale
+	DEVICE_MODEL := WI4A-AC400i
+	SOC := qcom-ipq8065
+	DEVICE_DTS := qcom-ipq8065-wi4a-ac400i
+	BLOCKSIZE := 128k
+	PAGESIZE := 2048
+	BOARD_NAME := wi4a-ac400i
+	DEVICE_PACKAGES := -swconfig ath10k-firmware-qca9984-ct
+endef
+TARGET_DEVICES += nokia_wi4a-ac400i
+
 define Device/qcom_ipq8064-ap148
 	$(call Device/FitImage)
 	$(call Device/UbiFit)
